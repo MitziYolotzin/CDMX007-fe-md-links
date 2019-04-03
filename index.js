@@ -2,5 +2,5 @@
 //   // ...
 // };
 
-const indexMd = require('./indexRF.js');
-console.log(indexMd);
+const readData = require('./readMD.js');
+console.log(readData);
