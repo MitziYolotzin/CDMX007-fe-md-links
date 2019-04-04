@@ -1,5 +1,6 @@
 const fs = require('fs');
 const readURL = require('./readURL');
+const readingMd = {};
 
 const mdFind = () => {
 
@@ -14,4 +15,5 @@ const mdFind = () => {
 
 mdFind();
 
-module.exports.mdFind = mdFind;
+//module.exports.mdFind = mdFind;
+module.exports.readingMd = readingMd;
