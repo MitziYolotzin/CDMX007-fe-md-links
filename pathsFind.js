@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const readURL = require('./readURL.js');
+const fetch = require('node-fetch');
 
 const pathsMd = () => {
 
