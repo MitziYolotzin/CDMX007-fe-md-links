@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const readURL = require('./readURL.js');
 const fetch = require('node-fetch');
-const testFetch = require('./testFetch.js');
+const statusLinks = require('./statusLinks.js');
 
 const pathsMd = () => {
 
@@ -13,11 +13,10 @@ const pathsMd = () => {
       data.forEach(element => {
         if (path.extname(element) === ".md") {
           fs.readFile(element, 'utf-8', (err, data) =>
-
             {
-              if (err){
+              if (err) {
                 console.error('error', err);
-              }else{
+              } else {
                 readURL.readLinkURL(data)
               }
             }
@@ -30,16 +29,22 @@ const pathsMd = () => {
 
   });
 
-// let promesa = fetch(element);
-// promesa.then((res)=>{
-//   return res.json();
-// }) .then((data)=>{
-// console.log(data);
-// });
-  
 }
-
-
-//}
-
 module.exports = pathsMd;
+
+/*
+let promesa = fetch(element);
+promesa.then((res)=>{
+  return res.json();
+}) .then((data)=>{
+console.log(data);
+});
+}
+//
+async function fetchLinks() {
+  const res = await fetch (element);
+  const data = await res.json();
+  console.log(data);
+}
+  fetchLinks();
+*/
