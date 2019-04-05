@@ -3,5 +3,11 @@
   "version": "0.1.0",
   "devDependencies": {
     "jest": "^24.7.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "bin": {
+    "mdLinks": "./index.js"
   }
 }
