@@ -3,12 +3,16 @@
 ## Link npm
 [Proyecto NPM](https://www.npmjs.com/package/@drosophyllum/mdlinks)
 
+-Instalar node.js
+-Instalar dependencias: npm install
+-Instalar dependencia del proyecto: npm i @drosophyllum/mdlinks
+
 #
 
 ### Boceto Diagrama de Flujo
-[Boceto diagrama](https://docs.google.com/document/d/1o4-FjFOaUuPfN857oUrgex7oJrt1_TmY2IA4ur6bKWA/edit)
+[Boceto diagrama y pseudocódigo](https://docs.google.com/document/d/1o4-FjFOaUuPfN857oUrgex7oJrt1_TmY2IA4ur6bKWA/edit)
 
-
+#
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
