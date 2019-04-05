@@ -3,9 +3,9 @@
 ## Link npm
 [Proyecto NPM](https://www.npmjs.com/package/@drosophyllum/mdlinks)
 
--Instalar node.js
--Instalar dependencias: npm install
--Instalar dependencia del proyecto: npm i @drosophyllum/mdlinks
+- Instalar node.js
+- Instalar dependencias: npm install
+- Instalar dependencia del proyecto: npm i @drosophyllum/mdlinks
 
 #
 
