@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 const statusLinks = require('./statusLinks.js');
 
 
+
 const readLinkURL = (data) => {
 
   const regexLink = /(https?:\/\/[^\)\s ]+)/g;

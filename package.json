@@ -6,9 +6,8 @@
   },
   "dependencies": {
     "node-fetch": "^2.3.0"
+  },
+  "bin": {
+    "mdLinks": "./index.js"
   }
-  // ,
-  // "bin": {
-  //   "mdLinks": "./index.js"
-  // }
 }
