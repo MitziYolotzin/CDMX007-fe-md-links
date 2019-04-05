@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const readURL = require('./readURL.js');
 const fetch = require('node-fetch');
+const testFetch = require('./testFetch.js');
 
 const pathsMd = () => {
 
@@ -14,10 +15,11 @@ const pathsMd = () => {
           fs.readFile(element, 'utf-8', (err, data) =>
 
             {
-              if (err)
+              if (err){
                 console.error('error', err);
-              else
+              }else{
                 readURL.readLinkURL(data)
+              }
             }
           )
         }
@@ -28,6 +30,16 @@ const pathsMd = () => {
 
   });
 
+// let promesa = fetch(element);
+// promesa.then((res)=>{
+//   return res.json();
+// }) .then((data)=>{
+// console.log(data);
+// });
+  
 }
+
+
+//}
 
 module.exports = pathsMd;
