@@ -8,9 +8,9 @@ const statusDate = (regexMatch) => {
     fetch(element)
       .then(response => {
         if (response.status == 200) {
-          console.log(`${element}` + " " + response.status + " " + response.statusText);
+          console.log(`${element}` + " " + "Status: " + response.status + " " + "\uD83D\uDE00 " +  response.statusText);
         } else if (response.status == 404) {
-          console.log(`${element}` + " " + response.status + " " + response.statusText);
+          console.log(`${element}` + " " + "Status: " +  response.status + " "  +  response.statusText);
         }
       })
       .catch(err => console.log(err));
