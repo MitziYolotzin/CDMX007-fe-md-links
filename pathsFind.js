@@ -23,8 +23,8 @@ const pathsMd = () => {
                 readURL.readLinkURL(data)
               } else if (comandOptions == '--stats') {
                 console.log('aqui va la funcion stats')
-              } else if (comandOptions == " ") {
-                readURL.readLinkURL(data)
+              } else if (comandOptions == '--links'  ) {
+                readURL.readLinkURLData(data)
               }
             }
           )
