@@ -1,16 +1,21 @@
 const readURL = require('./readURL.js');
 const paths = require('./pathsFind.js');
 const fetch = require('node-fetch');
+const colors = require('colors');
+const path = require ('path');
 
 
 const statusDate = (regexMatch) => {
   regexMatch.forEach(element => {
+    const fileDates = path.parse(element);
+    const fileName = fileDates.name;
     fetch(element)
       .then(response => {
-        if (response.status == 200) {
-          console.log(`${element}` + " " + "Status: " + response.status + " " + "\uD83D\uDE00 " +  response.statusText);
-        } else if (response.status == 404) {
-          console.log(`${element}` + " " + "Status: " +  response.status + " "  +  response.statusText);
+        const statusCheck = response.status;
+        if (statusCheck == 200) {
+          console.log(`${fileName}`.cyan + " " + `${element}` + " " + "Status: ".blue + (colors.blue(response.status)) + " " +  response.statusText.blue);
+        } else if (statusCheck == 404) {
+          console.log(`${fileName}`.cyan + " " + `${element}`.grey + " " + "Status: ".red  +  (colors.red(response.status)) + " " +  response.statusText.red);
         }
       })
       .catch(err => console.log(err));
