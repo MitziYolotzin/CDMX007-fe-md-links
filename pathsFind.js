@@ -3,16 +3,19 @@ const path = require('path');
 const readURL = require('./readURL.js');
 const fetch = require('node-fetch');
 const statusLinks = require('./statusLinks.js');
+const routeDirUser = process.argv[2];
+const comandValidate = process.argv[3];
 
 const pathsMd = () => {
 
-  fs.readdir('./', (err, data) => {
+  fs.readdir(routeDirUser, (err, data) => {
+    const pathAbsolute = path.resolve(routeDirUser);
     if (err) {
       console.error('error', err);
     } else {
       data.forEach(element => {
         if (path.extname(element) === ".md") {
-          fs.readFile(element, 'utf-8', (err, data) =>
+            fs.readFile(pathAbsolute.element, 'utf-8', (err, data) =>
             {
               if (err) {
                 console.error('error', err);
