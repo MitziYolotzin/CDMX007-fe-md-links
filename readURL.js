@@ -23,6 +23,9 @@ const readLinkURLData = (data) => {
 
 };
 
+//const sumLinks = regexMatch.reduce((prev, next) => prev + next);
+//console.log(sumLinks);
+
 //Ejemplo reduce
 // computeStats: (data,valueItem) => {
 //   let arrayCandys = [];
@@ -37,3 +40,17 @@ const readLinkURLData = (data) => {
 //   const averageComplete = sum / arrayCandys.length;
 
 module.exports = {readLinkURL, readLinkURLData};
+
+//Ejemplo reduce
+// const linkStats = (regexMatch,data,valueItem) => {
+//   let linksTotal = [];
+//   let result = {};
+//   regexMatch.forEach(element => {
+//     if(element[valueItem] > 0){
+//       linksTotal.push(element[valueItem])
+//     }
+//   });
+// 
+//   const sum = linksTotal.reduce((prev, next) => prev + next);
+//   const averageComplete = sum / arrayCandys.length;
+
