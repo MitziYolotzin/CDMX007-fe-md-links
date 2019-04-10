@@ -20,11 +20,12 @@ const pathsMd = () => {
               if (err) {
                 console.error('error', err);
               } else if(comandOptions == '--validate') {
-                readURL.readLinkURL(data)
+                readURL.readLinkURL(data);
               } else if (comandOptions == '--stats') {
-                console.log('aqui va la funcion stats')
+                readURL.readLinkStats(data);
+                //console.log('aqui va la funcion stats')
               } else if (comandOptions == '--links'  ) {
-                readURL.readLinkURLData(data)
+                readURL.readLinkURLData(data);
               }
             }
           )

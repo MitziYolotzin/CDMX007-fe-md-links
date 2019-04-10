@@ -23,6 +23,23 @@ const readLinkURLData = (data) => {
 
 };
 
+const readLinkStats = (data) => {
+
+  const regexLink = /(https?:\/\/[^\)\s ]+)/g;
+  const regexMatch = data.match(regexLink);
+  //statusLinks.statusDate(regexMatch);
+  const uniques = new Set(regexMatch);
+
+  console.log('Total Links:' + regexMatch.length );
+  console.log('Uniques:' + ([...uniques].length) );
+};
+
+// let arr = [1,2,3,3,4,5,5,5,5,5];
+
+// let unicos = new Set(arr);
+
+// console.log("Unicos: ", [...unicos]);
+
 //const sumLinks = regexMatch.reduce((prev, next) => prev + next);
 //console.log(sumLinks);
 
@@ -39,7 +56,7 @@ const readLinkURLData = (data) => {
 //   const sum = arrayCandys.reduce((prev, next) => prev + next);
 //   const averageComplete = sum / arrayCandys.length;
 
-module.exports = {readLinkURL, readLinkURLData};
+module.exports = {readLinkURL, readLinkURLData, readLinkStats};
 
 //Ejemplo reduce
 // const linkStats = (regexMatch,data,valueItem) => {

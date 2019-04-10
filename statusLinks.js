@@ -8,12 +8,15 @@ const path = require ('path');
 const statusDate = (regexMatch) => {
   regexMatch.forEach(element => {
     const fileDates = path.parse(element);
+    
     const fileName = fileDates.name;
+    const fileBase = fileName.basename;
+    
     fetch(element)
       .then(response => {
         const statusCheck = response.status;
         if (statusCheck == 200) {
-          console.log(`${fileName}`.cyan + " " + `${element}` + " " + "Status: ".blue + (colors.blue(response.status)) + " " +  response.statusText.blue);
+          console.log(`${fileName}` + `${fileName}`.cyan + " " + `${element}` + " " + "Status: ".blue + (colors.blue(response.status)) + " " +  response.statusText.blue);
         } else if (statusCheck == 404) {
           console.log(`${fileName}`.cyan + " " + `${element}`.grey + " " + "Status: ".red  +  (colors.red(response.status)) + " " +  response.statusText.red);
         }
