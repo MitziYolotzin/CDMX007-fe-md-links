@@ -4,7 +4,7 @@ Herramienta y librería creada usando Node.js (entorno de ejecución para JavaSc
 
 ## Proyecto
 [Proyecto NPM Markdown links](https://www.npmjs.com/package/@drosophyllum/mdlinks) version
-0.1.1
+0.1.2
 
 - Instalar [Node.js](https://nodejs.org/es/)
 - Instalar librería del proyecto desde la terminal dentro del proyecto en donde se ejecutará la búsqueda de archivos Markdown: 
