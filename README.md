@@ -32,6 +32,7 @@ mdLinks ./  --stats
 
 ### Boceto Diagrama de Flujo
 [Boceto diagrama y pseudocódigo](https://docs.google.com/document/d/1o4-FjFOaUuPfN857oUrgex7oJrt1_TmY2IA4ur6bKWA/edit)
+<a href="https://ibb.co/hywNrvG"><img src="https://i.ibb.co/PN0yJ82/diagramaflujo.jpg" alt="diagramaflujo" border="0"></a>
 
 #
 ## Preámbulo
