@@ -8,3 +8,14 @@ describe('mdLinks', () => {
   });
 
 });
+
+const pathsMd = require('../pathsFind');
+
+describe('pathsMd', () => {
+
+  it('pathsMd should be a function', () => {
+   expect(typeof pathsMd).toBe('function');
+  });
+
+}); 
+
