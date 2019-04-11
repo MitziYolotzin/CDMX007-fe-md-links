@@ -1,11 +1,32 @@
 # Markdown Links
-#
-## Link npm
-[Proyecto NPM](https://www.npmjs.com/package/@drosophyllum/mdlinks)
 
-- Instalar node.js
-- Instalar dependencias: npm install
-- Instalar dependencia del proyecto: npm i @drosophyllum/mdlinks
+Herramienta y librería creada usando Node.js (entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome), que lee y analiza archivos en formato Markdown, para verificar los links que contengan y reportar algunas estadísticas.
+
+## Proyecto
+[Proyecto NPM Markdown links](https://www.npmjs.com/package/@drosophyllum/mdlinks) version
+0.1.1
+
+- Instalar [Node.js](https://nodejs.org/es/)
+- Instalar librería del proyecto desde la terminal dentro del proyecto en donde se ejecutará la búsqueda de archivos Markdown: 
+
+npm i @drosophyllum/mdlinks
+- Instalar [node-fetch](https://www.npmjs.com/package/node-fetch)
+- Instalar [npm link](https://docs.npmjs.com/cli/link.html) para acceder con CLI: mdLinks
+
+Guía:
+
+1.- Para encontrar un arreglo con la lista de los links de los archivos .md que se encontraron en la carpeta. Dentro del proyecto o carpeta que contenga archivos .md, ejecutar desde terminal:
+
+mdLinks ./ --links
+
+
+2.- Para saber que archivos se encuentran activos y que archivos se encuentran desactivados, ejecutar:
+
+mdLinks ./  --validate
+
+3.- Para saber el número total de links, los links no repetidos y los links rotos, ejecutar:
+
+mdLinks ./  --stats
 
 #
 
@@ -30,7 +51,6 @@ herramienta usando [Node.js](https://nodejs.org/), que lea y analice archivos
 en formato `Markdown`, para verificar los links que contengan y reportar
 algunas estadísticas.
 
-![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
 ## Introducción
 
@@ -180,9 +200,7 @@ Por ejemplo:
 
 ```sh
 $ md-links ./some/example.md
-./some/example.md http://algo.com/2/3/ Link a algo
-./some/example.md https://otra-cosa.net/algun-doc.html algún doc
-./some/example.md http://google.com/ Google
+
 ```
 
 El comportamiento por defecto no debe validar si las URLs responden ok o no,
@@ -203,9 +221,7 @@ Por ejemplo:
 
 ```sh
 $ md-links ./some/example.md --validate
-./some/example.md http://algo.com/2/3/ ok 200 Link a algo
-./some/example.md https://otra-cosa.net/algun-doc.html fail 404 algún doc
-./some/example.md http://google.com/ ok 301 Google
+
 ```
 
 Vemos que el _output_ en este caso incluye la palabra `ok` o `fail` después de
@@ -355,21 +371,21 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ### General
 
-- [ ] Puede instalarse via `npm install --global <github-user>/md-links`
+- [x] Puede instalarse via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
-- [ ] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
-- [ ] Un board con el backlog para la implementación de la librería.
-- [ ] Documentación técnica de la librería.
-- [ ] Guía de uso e instalación de la librería
+- [x] Colocar el pseudo código o diagrama de flujo con el algoritmo que soluciona el problema.
+- [x] Un board con el backlog para la implementación de la librería.
+- [x] Documentación técnica de la librería.
+- [x] Guía de uso e instalación de la librería
 
 ### API `mdLinks(path, opts)`
 
-- [ ] El módulo exporta una función con la interfaz (API) esperada.
+- [x] El módulo exporta una función con la interfaz (API) esperada.
 - [ ] Implementa soporte para archivo individual
-- [ ] Implementa soporte para directorios
-- [ ] Implementa `options.validate`
+- [x] Implementa soporte para directorios
+- [x] Implementa `options.validate`
 
 ### Pruebas / tests
 
@@ -379,10 +395,10 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 
 ### CLI
 
-- [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
+- [x] Expone ejecutable `md-links` en el path (configurado en `package.json`)
 - [ ] Se ejecuta sin errores / output esperado
-- [ ] Implementa `--validate`
-- [ ] Implementa `--stats`
+- [x] Implementa `--validate`
+- [x] Implementa `--stats`
 
 ## Hacker Edition
 
