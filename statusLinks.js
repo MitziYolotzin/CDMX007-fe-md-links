@@ -16,7 +16,7 @@ const statusDate = (regexMatch) => {
       .then(response => {
         const statusCheck = response.status;
         if (statusCheck == 200) {
-          console.log(`Name : ${fileName}`.cyan + " " + `Link : ${element}`.yellow + " " + "Status : ".blue + `${response.status}`.blue + " " +  `${response.statusText}`.blue);
+          console.log(`Name : ${fileName}`.cyan + " " + `Link : ${element}`.green + " " + "Status : ".blue + `${response.status}`.blue + " " +  `${response.statusText}`.blue);
         } else if (statusCheck == 404) {
           console.log(`Name : ${fileName}`.cyan + " " + `Link : ${element}` + " " + "Status : ".red  +  `${response.status}`.red + " " +  `${response.statusText}`.red);
         }
@@ -48,7 +48,7 @@ const linksStatusFail = (regexMatch) => {
   });
 setTimeout( () => {
   console.log(`Broken : ` + `${linksFail.length}`)  
-},5000)
+},3000)
 }
 
 
