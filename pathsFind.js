@@ -23,8 +23,7 @@ const pathsMd = () => {
               } else if(comandOptions == '--validate') {
                 readURL.readLinkURL(data);
               } else if (comandOptions == '--stats') {
-                readURL.readLinkStats(data);
-                
+                readURL.readLinkStats(data);                
               } else if (comandOptions == '--links' ) {
                 readURL.readLinkURLData(data);
               } else if (comandOptions == '--stats' && comandOptionsOther == '--validate'  ) {
