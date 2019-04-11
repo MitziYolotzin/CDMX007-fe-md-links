@@ -10,8 +10,7 @@ Herramienta y librería creada usando Node.js (entorno de ejecución para JavaSc
 - Instalar librería del proyecto desde la terminal dentro del proyecto en donde se ejecutará la búsqueda de archivos Markdown: 
 
 npm i @drosophyllum/mdlinks
-- Instalar [node-fetch](https://www.npmjs.com/package/node-fetch)
-- Instalar [npm link](https://docs.npmjs.com/cli/link.html) para acceder con CLI: mdLinks
+
 
 Guía:
 
@@ -27,6 +26,11 @@ mdLinks ./  --validate
 3.- Para saber el número total de links, los links no repetidos y los links rotos, ejecutar:
 
 mdLinks ./  --stats
+
+-En caso de ser necesario instalar: 
+- Instalar [node-fetch](https://www.npmjs.com/package/node-fetch)
+- Instalar [npm link](https://docs.npmjs.com/cli/link.html) para acceder con CLI: mdLinks
+- Instalar [npm install colors](https://www.npmjs.com/package/colors)
 
 #
 
