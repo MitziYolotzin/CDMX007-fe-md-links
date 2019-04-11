@@ -4,9 +4,10 @@ const readURL = require('./readURL.js');
 const fetch = require('node-fetch');
 const statusLinks = require('./statusLinks.js');
 const comandOptions = process.argv[3];
+const comandOptionsOther = process.argv[4];
 const pathAbsolute = path.resolve(process.argv[2]);
 
-//Function to read path directory, found files .md and send command options for show data
+//Function to read path directory, found files .md and send command options for show data with opstions
 const pathsMd = () => {
 
   fs.readdir(pathAbsolute, (err, data) => {
@@ -23,10 +24,14 @@ const pathsMd = () => {
                 readURL.readLinkURL(data);
               } else if (comandOptions == '--stats') {
                 readURL.readLinkStats(data);
-                //console.log('aqui va la funcion stats')
-              } else if (comandOptions == '--links'  ) {
+                
+              } else if (comandOptions == '--links' ) {
                 readURL.readLinkURLData(data);
+              } else if (comandOptions == '--stats' && comandOptionsOther == '--validate'  ) {
+                readURL.readLinkStatsBroken(data);
+              
               }
+
             }
           )
         }
