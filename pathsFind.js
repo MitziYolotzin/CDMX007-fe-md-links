@@ -6,7 +6,7 @@ const statusLinks = require('./statusLinks.js');
 const comandOptions = process.argv[3];
 const pathAbsolute = path.resolve(process.argv[2]);
 
-
+//Function to read path directory, found files .md and send command options for show data
 const pathsMd = () => {
 
   fs.readdir(pathAbsolute, (err, data) => {
