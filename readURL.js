@@ -33,7 +33,7 @@ const readLinkStats = (data) => {
 
   console.log('Total Links: '.green + regexMatch.length );
   console.log('Unique: '.magenta + ([...uniques].length) );
-  statusLinks.linksStatusFail(regexMatch);
+  //mdstatusLinks.linksStatusFail(regexMatch);
 
 };
 

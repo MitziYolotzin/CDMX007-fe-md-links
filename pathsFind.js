@@ -20,14 +20,14 @@ const pathsMd = () => {
             {
               if (err) {
                 console.error('error', err);
-              } else if(comandOptions == '--validate') {
-                readURL.readLinkURL(data);
+              }  else if (comandOptions == '--stats' && comandOptionsOther == '--validate'  ) {
+                readURL.readLinkStatsBroken(data);             
               } else if (comandOptions == '--stats') {
                 readURL.readLinkStats(data);                
               } else if (comandOptions == '--links' ) {
                 readURL.readLinkURLData(data);
-              } else if (comandOptions == '--stats' && comandOptionsOther == '--validate'  ) {
-                readURL.readLinkStatsBroken(data);
+              } else if(comandOptions == '--validate') {
+                readURL.readLinkURL(data);
               
               }
 
