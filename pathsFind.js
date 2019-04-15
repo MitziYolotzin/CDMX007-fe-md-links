@@ -28,7 +28,6 @@ const pathsMd = () => {
                 readURL.readLinkURLData(data);
               } else if(comandOptions == '--validate') {
                 readURL.readLinkURL(data);
-              
               }
 
             }
